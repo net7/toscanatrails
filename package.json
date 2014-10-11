@@ -2,6 +2,10 @@
   "name": "ToscanaTrails",
   "version": "1.0.0",
   "description": "ToscanaTrails: An Ionic project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/net7/toscanatrails.git"
+  },
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
