@@ -17,7 +17,18 @@ angular.module('starter.controllers', [])
       },
       defaults: {},
       geojson: {
-        data: GlobalData.tracks
+        data: GlobalData.tracks,
+        onEachFeature: function(feature, layer) {
+          if (!feature.properties['@relations'][0].reltags) return;
+
+          var tags = feature.properties['@relations'][0].reltags,
+              name = tags.name || '',
+              website = tags.website || '';
+
+          if (!name.length && !website.length) return;
+
+          layer.bindPopup(name + '<br />' + website);
+        }
       }
     });
 })
