@@ -1,6 +1,7 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('DashCtrl', function($scope, GlobalData) {
+    console.log(GlobalData);
     angular.extend($scope, {
       apuane: {
         lat: 44.032,
@@ -14,6 +15,9 @@ angular.module('starter.controllers', [])
           maxZoom: 6,
           attribution: '<a href="http://www.webmapp.it/mappa-delle-alpi-apuane-dati-cartografici-e-termini-duso/" target="_blank">Map data & terms</a>'
         }
+      },
+      geojson: {
+        data: GlobalData.tracks
       }
     });
 })
