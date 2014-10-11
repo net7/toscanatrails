@@ -21,6 +21,12 @@ angular.module('starter.controllers', [])
     });
 })
 
+.controller('TabCtrl', function($scope){
+    $scope.setLoc = function(){
+        alert("ciao")
+    };
+})
+
 .controller('FriendsCtrl', function($scope, Friends) {
   $scope.friends = Friends.all();
 })
