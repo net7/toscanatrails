@@ -67,6 +67,36 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
+    .state('tab.pin', {
+      url: '/pin',
+      views: {
+        'tab-pin': {
+          templateUrl: 'templates/tab-pin.html',
+          controller: 'PinCtrl'
+        }
+      }
+    })
+
+    .state('tab.loc', {
+      url: '/loc',
+      views: {
+        'tab-loc': {
+          templateUrl: 'templates/tab-loc.html',
+          controller: 'LocCtrl'
+        }
+      }
+    })
+
+    .state('tab.help', {
+      url: '/help',
+      views: {
+        'tab-help': {
+          templateUrl: 'templates/tab-help.html',
+          controller: 'LocCtrl'
+        }
+      }
+    })
+
     .state('tab.account', {
       url: '/account',
       views: {

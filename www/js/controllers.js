@@ -12,4 +12,13 @@ angular.module('starter.controllers', [])
 })
 
 .controller('AccountCtrl', function($scope) {
+
+})
+
+.controller('PinCtrl', function($scope) {
+    
+})
+
+.controller('LocCtrl', function($scope) {
+
 });
