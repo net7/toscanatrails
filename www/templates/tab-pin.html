@@ -1,5 +1,45 @@
-<ion-view title="Pin">
+<ion-view title="Segnalazioni">
   <ion-content class="padding">
-    <h1>Pin</h1>
+    <div class="list card">
+      <div class="item item-avatar">
+        <h2>Percorso delle giumente</h2>
+        <p>Segnala qualcosa riguardo a questo percorso</p>
+      </div>
+
+      <div class="item item-body">
+        <p>
+          <div class="list">
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  Tipologia
+                </div>
+                <select>
+                  <option selected>Albero caduto</option>
+                  <option>Motociclisti</option>
+                  <option>Anziane in déshabillé</option>
+                  <option>Altro</option>
+                </select>
+              </label>
+              <label class="item item-input" style="height: 100px">
+                <textarea placeholder="Inserisci commento"></textarea>
+              </label>
+            </div>
+            <!-- <div class="list"> -->
+              <!--  -->
+            <!-- </div> -->
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#/tab/dash">
+          <i class="icon ion-checkmark"></i>
+          Salva
+        </a>
+        <a class="tab-item" href="#/tab/dash">
+          <i class="icon ion-close-round"></i>
+          Annulla
+        </a>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

@@ -1,10 +1,10 @@
 {
-  "name": "ToscanaTrails",
+  "name": "TMapp",
   "version": "1.0.0",
-  "description": "ToscanaTrails: An Ionic project",
+  "description": "TMapp: An Ionic project",
   "repository": {
     "type": "git",
-    "url": "https://github.com/net7/toscanatrails.git"
+    "url": "https://github.com/net7/TMapp.git"
   },
   "dependencies": {
     "gulp": "^3.5.6",
