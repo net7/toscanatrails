@@ -3,18 +3,19 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope, GlobalData) {
     angular.extend($scope, {
       apuane: {
-        lat: 44.032,
-        lng: 10.31,
-        zoom: 4
+        lat: 43.806479,
+        lng: 11.293153,
+        zoom: 15
       },
       tiles: {
-        url: 'http://www.webmapp.it/maps/alpi-apuane/mobile-map/tiles/{z}/{x}/{y}.png',
+        url: 'http://www.webmapp.it/maps/firenze/tiles/{z}/{x}/{y}.png',
         options: {
-          minZoom: 2,
-          maxZoom: 6,
+          minZoom: 13,
+          maxZoom: 18,
           attribution: '<a href="http://www.webmapp.it/mappa-delle-alpi-apuane-dati-cartografici-e-termini-duso/" target="_blank">Map data & terms</a>'
         }
       },
+      defaults: {},
       geojson: {
         data: GlobalData.tracks
       }
