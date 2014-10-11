@@ -23,4 +23,10 @@ angular.module('starter.services', [])
       return friends[friendId];
     }
   }
-});
+})
+
+.factory('GlobalData', ['', function(){
+  return {
+      tracks : 'anonymous'
+  };
+}]);
