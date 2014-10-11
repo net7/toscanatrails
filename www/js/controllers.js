@@ -1,7 +1,6 @@
 angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, GlobalData) {
-    console.log(GlobalData);
     angular.extend($scope, {
       apuane: {
         lat: 44.032,
