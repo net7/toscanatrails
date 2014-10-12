@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, GlobalData) {
+.controller('DashCtrl', function($scope, GlobalData, leafletData) {
     angular.extend($scope, {
       apuane: {
         lat: 43.806479,
@@ -19,17 +19,35 @@ angular.module('starter.controllers', [])
       geojson: {
         data: GlobalData.tracks,
         onEachFeature: function(feature, layer) {
-          if (!feature.properties['@relations'][0].reltags) return;
+          //if (!feature.properties['@relations'][0].reltags) return;
 
-          var tags = feature.properties['@relations'][0].reltags,
+          /*var tags = feature.properties['@relations'][0].reltags,
               name = tags.name || '',
               website = tags.website || '';
 
           if (!name.length && !website.length) return;
 
-          layer.bindPopup(name + '<br />' + website);
+          if (website.length) {
+            website = '<a href="' + tags.website + '">' + tags.website + '</a>';
+          }*/
+
+          var content = '<strong>Sentiero 22B CAI</strong><br />Difficoltà E<br />Dislivello 350m<br />Tempo 1h 5m';
+
+          layer.bindPopup(content);
         }
       }
+    });
+
+    leafletData.getMap().then(function(map) {
+      // @todo I know, globals are bad, but I'm in a hurry.
+      L.geoJson(window.Global.pois, {
+        onEachFeature: function(feature, layer) {
+
+          var content = feature.properties.nome + '<br />' + feature.properties.tipologia;
+
+          layer.bindPopup(content);
+        }
+      }).addTo(map);
     });
 })
 
